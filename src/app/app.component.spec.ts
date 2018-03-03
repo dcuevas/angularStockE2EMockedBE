@@ -35,6 +35,6 @@ describe('AppComponent', () => {
   });
 
   it('should load the stock app', () => {
-    expect(el.innerHTML).toContain('Stock Tracker Broken');
+    expect(el.innerHTML).toContain('Stock Tracker');
   });
 });
