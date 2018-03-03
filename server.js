@@ -11,7 +11,7 @@ ngApimock.run({
   "done": function() {}
 });
 
-app.set('port', (process.env.PORT || 49152));
+app.set('port', (process.env.PORT || 3000));
 // process the api calls through ng-apimock
 app.use(require('ng-apimock/lib/utils').ngApimockRequest);
 // serve the mocking interface for local development
