@@ -1,0 +1,7 @@
+{
+  "/stocks/*": {
+    "target": "http://localhost:49152",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

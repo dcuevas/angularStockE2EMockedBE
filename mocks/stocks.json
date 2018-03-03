@@ -1,0 +1,27 @@
+{
+  "expression": "stocks\/.*",
+  "method": "GET",
+  "name": "stocks",
+  "isArray": true,
+  "responses": {
+    "successful-get-4": {
+      "status": 200,
+      "headers": { "Content-type": "application/json" },
+      "file": "payloads/get4.stocks.json"
+    },
+    "successful-get-5": {
+      "default": true,
+      "status": 200,
+      "headers": { "Content-type": "application/json" },
+      "file": "payloads/get5.stocks.json"
+    },
+    "successful-get-6": {
+      "status": 200,
+      "headers": { "Content-type": "application/json" },
+      "file": "payloads/get6.stocks.json"
+    },
+    "internal-server-error": {
+      "status":500
+    }
+  }
+}

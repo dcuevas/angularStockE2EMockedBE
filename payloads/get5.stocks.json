@@ -1,0 +1,32 @@
+[
+  {
+    "symbol": "AAPL",
+    "lastTradePriceOnly": 176.21,
+    "change": 5.2300067,
+    "changeInPercent": 0.006914324
+  },
+  {
+    "symbol": "GOOG",
+    "lastTradePriceOnly": 1078.92,
+    "change": 9.400024,
+    "changeInPercent": 0.008789012
+  },
+  {
+    "symbol": "FB",
+    "lastTradePriceOnly": 176.62,
+    "change": 0.6799927,
+    "changeInPercent": 0.0038649123
+  },
+  {
+    "symbol": "AMZN",
+    "lastTradePriceOnly": 1500.25,
+    "change": 6.800049,
+    "changeInPercent": 0.0045532486
+  },
+  {
+    "symbol": "TWTR",
+    "lastTradePriceOnly": 33,
+    "change": 0.7599983,
+    "changeInPercent": 0.023573149
+  }
+]

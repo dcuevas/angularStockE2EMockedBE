@@ -5,10 +5,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "mockStart": "ng serve --proxy-config proxy.config.json",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e --proxy-config proxy.config.json"
   },
   "private": true,
   "dependencies": {
@@ -29,10 +30,15 @@
     "@angular/cli": "~1.7.2",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
+    "@types/chai": "^4.1.2",
+    "@types/cucumber": "^4.0.1",
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
     "codelyzer": "^4.0.1",
+    "cucumber": "^4.0.0",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",
@@ -40,9 +46,11 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "~5.1.2",
-    "ts-node": "~4.1.0",
+    "ng-apimock": "^1.4.4",
+    "protractor": "^5.3.0",
+    "protractor-cucumber-framework": "^4.2.0",
+    "ts-node": "^5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3"
+    "typescript": "^2.7.2"
   }
 }
