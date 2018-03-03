@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 const stocks: Array<string> = ['AAPL', 'GOOG', 'FB', 'AMZN', 'TWTR'];
-const service: string = '';
 
 export interface StockInterface {
   symbol: string;
@@ -32,7 +31,7 @@ export class StocksService {
 
   load(symbols) {
     if (symbols) {
-      return this.http.get<Array<StockInterface>>(service + '/stocks/snapshot?symbols=' + symbols.join());
+      return this.http.get<Array<StockInterface>>('/stocks/snapshot?symbols=' + symbols.join());
     }
   }
 }
