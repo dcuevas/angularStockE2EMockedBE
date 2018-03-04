@@ -1,7 +1,8 @@
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 const child_process = require('child_process');
-const jsonReports = process.cwd() + '/reports/json';
+const jsonReports = process.cwd() + '/reports-metadata/json';
+const htmlReports = process.cwd() + '/reports/html';
 const Reporter = require('./e2e/support/reporter');
 
 const server = child_process.spawn('node', ['server.js']);
@@ -30,7 +31,7 @@ exports.config = {
     strict: true,
     format: [
       'progress-bar',
-      'json:./reports/json/cucumber_report.json'
+      'json:./reports-metadata/json/cucumber_report.json'
       //'usage-json',
       // 'pretty:reports/summary.txt',
       // 'json:reports/summary.json'
@@ -55,6 +56,7 @@ exports.config = {
     browser.ngApimock = require('./.tmp/ngApimock/protractor.mock.js');
 
     Reporter.createDirectory(jsonReports);
+    Reporter.createDirectory(htmlReports);
     // jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   },
   onComplete: function() {

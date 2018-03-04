@@ -2,7 +2,7 @@ const fs = require('fs');
 const mkdirp = require('mkdirp');
 const reporter = require('cucumber-html-reporter');
 const htmlReports = process.cwd() + '/reports/html';
-const targetJson = process.cwd() + '/reports/json/cucumber_report.json';
+const targetJson = process.cwd() + '/reports-metadata/json/cucumber_report.json';
 
 const cucumberReporteroptions = {
   theme: 'bootstrap',
