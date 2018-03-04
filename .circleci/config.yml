@@ -27,3 +27,6 @@ jobs:
 
       - store_test_results:
           path: reports-metadata
+
+      - store_artifacts:
+          path: reports-metadata
