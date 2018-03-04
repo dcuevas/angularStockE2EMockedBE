@@ -16,7 +16,7 @@ Feature: Stock App
   Scenario: Add a new stock and be updated in dashboard
     Given I am on the home page
       And I click on dashboard
-      And I see 7 stock cards
+      And I see 5 stock cards
      When I click on manage
       And I add "MSFT" stock
      Then I see last symbol is "MSFT"
