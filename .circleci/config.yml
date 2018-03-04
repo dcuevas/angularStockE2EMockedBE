@@ -24,3 +24,7 @@ jobs:
 
       - run: xvfb-run -a npm run test-ci
       - run: xvfb-run -a npm run e2e-ci
+
+      - store_test_results:
+          path:
+            - reports/json
