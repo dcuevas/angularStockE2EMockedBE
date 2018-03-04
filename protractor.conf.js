@@ -31,7 +31,7 @@ exports.config = {
     strict: true,
     format: [
       'progress-bar',
-      'json:./reports-metadata/json/cucumber_report.json'
+      'json:./reports-metadata/json/report.cucumber'
       //'usage-json',
       // 'pretty:reports/summary.txt',
       // 'json:reports/summary.json'
