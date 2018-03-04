@@ -1,7 +1,7 @@
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 const child_process = require('child_process');
-const jsonReports = process.cwd() + '/reports-metadata/json';
+const jsonReports = process.cwd() + '/reports-metadata/e2e';
 const htmlReports = process.cwd() + '/reports/html';
 const Reporter = require('./e2e/support/reporter');
 
@@ -31,7 +31,7 @@ exports.config = {
     strict: true,
     format: [
       'progress-bar',
-      'json:./reports-metadata/json/report.cucumber'
+      'json:./reports-metadata/e2e/report.cucumber'
       //'usage-json',
       // 'pretty:reports/summary.txt',
       // 'json:reports/summary.json'
