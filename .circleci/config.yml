@@ -30,3 +30,9 @@ jobs:
 
       - store_artifacts:
           path: reports-metadata
+
+    deployment:
+      staging:
+        branch: master
+        heroku:
+          appname: angular-stock-e2e-mocked-be
