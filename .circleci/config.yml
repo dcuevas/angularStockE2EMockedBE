@@ -39,9 +39,9 @@ jobs:
       - run:
           command: npm global add now
       - run:
-          command:
-            - now -t ${NOW_TOKEN}
-            - now -t ${NOW_TOKEN} alias stock
+          command: now -t ${NOW_TOKEN}
+      - run:
+          command: now -t ${NOW_TOKEN} alias stock
 
 workflows:
   version: 2
