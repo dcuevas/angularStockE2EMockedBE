@@ -36,12 +36,12 @@ jobs:
       enabled: true
     working_directory: ~/stock
     steps:
-      run:
-        command: npm global add now
-      run:
-        command:
-          - now -t ${NOW_TOKEN}
-          - now -t ${NOW_TOKEN} alias stock
+      - run:
+          command: npm global add now
+      - run:
+          command:
+            - now -t ${NOW_TOKEN}
+            - now -t ${NOW_TOKEN} alias stock
 
 workflows:
   version: 2
