@@ -36,6 +36,7 @@ jobs:
       enabled: true
     working_directory: ~/stock
     steps:
+      - checkout
       - run:
           command: npm install -g now
       - run:
