@@ -40,6 +40,8 @@ jobs:
       - run:
           command: npm install -g now
       - run:
+          command: npm run build
+      - run:
           command: now -t ${NOW_TOKEN} --docker --public
       - run:
           command: now -t ${NOW_TOKEN} alias stock --docker --public
