@@ -37,7 +37,7 @@ jobs:
     working_directory: ~/stock
     steps:
       - run:
-          command: npm global add now
+          command: npm install -g now
       - run:
           command: now -t ${NOW_TOKEN}
       - run:
