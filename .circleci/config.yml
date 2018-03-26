@@ -1,14 +1,11 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/repo
+    working_directory: ~/stock
 
     docker:
       - image: circleci/node:8-browsers
 
-    dependencies:
-       pre:
-          - npm global add now
     steps:
       - checkout
 
@@ -34,9 +31,26 @@ jobs:
       - store_artifacts:
           path: reports-metadata
 
-    deployment:
-      staging:
-        branch: master
-        commands:
+  deploy:
+    machine:
+      enabled: true
+    working_directory: ~/stock
+    steps:
+      run:
+        command: npm global add now
+      run:
+        command:
           - now -t ${NOW_TOKEN}
           - now -t ${NOW_TOKEN} alias stock
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
