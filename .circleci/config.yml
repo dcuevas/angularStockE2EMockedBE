@@ -38,8 +38,6 @@ jobs:
     steps:
       - checkout
       - run: npm install -g now
-      - run: npm install
-      - run: npm run build
       - run: now -t ${NOW_TOKEN} --docker --public
       - run: now -t ${NOW_TOKEN} alias stock --docker --public
 
