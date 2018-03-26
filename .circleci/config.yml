@@ -39,6 +39,7 @@ jobs:
       - checkout
       - run:
           command: npm install -g now
+      - run: npm install
       - run:
           command: npm run build
       - run:
