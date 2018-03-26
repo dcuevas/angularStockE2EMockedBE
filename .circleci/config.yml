@@ -37,15 +37,11 @@ jobs:
     working_directory: ~/stock
     steps:
       - checkout
-      - run:
-          command: npm install -g now
+      - run: npm install -g now
       - run: npm install
-      - run:
-          command: npm run build
-      - run:
-          command: now -t ${NOW_TOKEN} --docker --public
-      - run:
-          command: now -t ${NOW_TOKEN} alias stock --docker --public
+      - run: npm run build
+      - run: now -t ${NOW_TOKEN} --docker --public
+      - run: now -t ${NOW_TOKEN} alias stock --docker --public
 
 workflows:
   version: 2
