@@ -6,6 +6,9 @@ jobs:
     docker:
       - image: circleci/node:8-browsers
 
+    dependencies:
+       pre:
+          - npm global add now
     steps:
       - checkout
 
@@ -34,5 +37,6 @@ jobs:
     deployment:
       staging:
         branch: master
-        heroku:
-          appname: angular-stock-e2e-mocked-be
+        commands:
+          - now -t ${NOW_TOKEN}
+          - now -t ${NOW_TOKEN} alias stock
