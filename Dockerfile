@@ -8,6 +8,8 @@ RUN rm -rf /usr/share/nginx/html/*
 
 COPY /nginx/nginx.conf /etc/nginx/nginx.conf
 
+RUN chmod 777 -R /usr/share/nginx/html
+
 EXPOSE 3000
 
 CMD ["nginx", "-g", "daemon off;"]
