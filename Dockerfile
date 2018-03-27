@@ -1,4 +1,4 @@
-FROM smebberson/alpine-nginx-nodejs:latest
+FROM nginx:latest
 
 ## From 'builder' stage copy over the artifacts in dist folder to default nginx public folder
 COPY dist /usr/share/nginx/html
