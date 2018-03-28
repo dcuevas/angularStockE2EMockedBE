@@ -41,6 +41,7 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: now -t ${NOW_TOKEN} --docker --public
+      - run: now -t ${NOW_TOKEN} alias stock
 
 workflows:
   version: 2
